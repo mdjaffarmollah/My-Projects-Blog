@@ -1,5 +1,5 @@
 name: "My Projects Blog"
-title: "My Blog"
+title: "My Projects Blog"
 description: |
   My Blog
 output_dir: "_site"
