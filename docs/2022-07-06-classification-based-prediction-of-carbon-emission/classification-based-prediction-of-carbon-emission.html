@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Classification based Prediction of Carbon Emission</title>
+
+  <meta property="description" itemprop="description" content="Dissertation done during M.Sc program. You can check the report from the following [report link](https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1)"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-07-06"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-07-06"/>
+  <meta name="article:author" content="Md Jaffar Mollah"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Classification based Prediction of Carbon Emission"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Dissertation done during M.Sc program. You can check the report from the following [report link](https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1)"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Classification based Prediction of Carbon Emission"/>
+  <meta property="twitter:description" content="Dissertation done during M.Sc program. You can check the report from the following [report link](https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1)"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","categories","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Classification based Prediction of Carbon Emission"]},{"type":"character","attributes":{},"value":["Dissertation done during M.Sc program. You can check the report from the following [report link](https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1)\n"]},{"type":"character","attributes":{},"value":["clustermap.jpg"]},{"type":"character","attributes":{},"value":["clustering","classification","GLM","Robust GLM"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Md Jaffar Mollah"]}]}]},{"type":"character","attributes":{},"value":["2022-07-06"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["3dclusterplot.jpg","classification-based-prediction-of-carbon-emission_files/anchor-4.2.2/anchor.min.js","classification-based-prediction-of-carbon-emission_files/bowser-1.9.3/bowser.min.js","classification-based-prediction-of-carbon-emission_files/distill-2.2.21/template.v2.js","classification-based-prediction-of-carbon-emission_files/figure-html5/Analyzing and visual-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/Analyzing and visual-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/Analyzing and visual-3.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-1-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-14-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-14-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-15-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-16-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-16-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-17-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-19-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-19-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-20-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-20-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-21-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-21-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-22-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-22-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-23-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-23-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-24-1.png","classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-24-2.png","classification-based-prediction-of-carbon-emission_files/figure-html5/variable selection-1.png","classification-based-prediction-of-carbon-emission_files/header-attrs-2.11/header-attrs.js","classification-based-prediction-of-carbon-emission_files/jquery-3.6.0/jquery-3.6.0.js","classification-based-prediction-of-carbon-emission_files/jquery-3.6.0/jquery-3.6.0.min.js","classification-based-prediction-of-carbon-emission_files/jquery-3.6.0/jquery-3.6.0.min.map","classification-based-prediction-of-carbon-emission_files/popper-2.6.0/popper.min.js","classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy-bundle.umd.min.js","classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy-light-border.css","classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy.css","classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy.umd.min.js","classification-based-prediction-of-carbon-emission_files/webcomponents-2.0.0/webcomponents.js","classification.png","clusdescriptive.jpg","clustermap.jpg","comparison.png","distribution.png","final_data_climate_change.csv","mac_glm.png","mac_glmrob.png","qqplot_glm.png","qqplot_glmrob.png","Rtsneplot.jpeg","Silhouette plot.jpeg","transition_res.png","transition.png","tree.png","validation.png"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="classification-based-prediction-of-carbon-emission_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="classification-based-prediction-of-carbon-emission_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="classification-based-prediction-of-carbon-emission_files/popper-2.6.0/popper.min.js"></script>
+  <link href="classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="classification-based-prediction-of-carbon-emission_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="classification-based-prediction-of-carbon-emission_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="classification-based-prediction-of-carbon-emission_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="classification-based-prediction-of-carbon-emission_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="classification-based-prediction-of-carbon-emission_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Classification based Prediction of Carbon Emission","description":"Dissertation done during M.Sc program. You can check the report from the following [report link](https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1)","authors":[{"author":"Md Jaffar Mollah","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-07-06T00:00:00.000+05:30","citationText":"Mollah, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Classification based Prediction of Carbon Emission</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">clustering</div>
+<div class="dt-tag">classification</div>
+<div class="dt-tag">GLM</div>
+<div class="dt-tag">Robust GLM</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Dissertation done during M.Sc program. You can check the report
+from the following <a
+href="https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1">report
+link</a></p></p>
+</div>
+
+<div class="d-byline">
+  Md Jaffar Mollah  
+  
+<br/>2022-07-06
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#dealing-with-data">Dealing with data</a>
+<ul>
+<li><a href="#importing-and-description">Importing and
+description</a></li>
+<li><a href="#descriptive-statistics">Descriptive Statistics</a></li>
+<li><a href="#correlation-matrix">Correlation matrix</a></li>
+</ul></li>
+<li><a href="#variable-selection">Variable Selection</a>
+<ul>
+<li><a href="#based-on-descriptive">Based on descriptive</a></li>
+<li><a href="#based-on-correlation-matrix">Based on correlation
+matrix</a></li>
+<li><a href="#based-on-stepwise-regression">Based on stepwise
+regression</a></li>
+</ul></li>
+<li><a href="#creating-functions">Creating functions</a>
+<ul>
+<li><a href="#day-forward-technique">Day Forward Technique</a></li>
+<li><a href="#predict-second-half-technique">Predict Second Half
+Technique</a></li>
+<li><a href="#model-building">Model Building</a></li>
+<li><a href="#model-graph-display">Model Graph Display</a></li>
+<li><a href="#prediction-error">Prediction Error</a></li>
+</ul></li>
+<li><a href="#feature-scaling">Feature Scaling</a></li>
+<li><a href="#train-and-test-set">Train and Test set</a></li>
+<li><a href="#clustering">Clustering</a>
+<ul>
+<li><a href="#data-manipulation">Data Manipulation</a></li>
+<li><a href="#distance-matrix">Distance Matrix</a></li>
+<li><a href="#cluster-number-choice">Cluster number choice</a></li>
+<li><a href="#pam-algorithm">PAM Algorithm</a></li>
+<li><a href="#plotting-clusters">Plotting clusters</a></li>
+<li><a href="#map-visualization">Map Visualization</a></li>
+<li><a href="#descriptive-statistics-of-clustered-countries">Descriptive
+Statistics of clustered countries</a></li>
+<li><a href="#merging-levels-of-certain-fields">Merging levels of
+certain fields</a></li>
+</ul></li>
+<li><a href="#data-modeling">Data Modeling</a>
+<ul>
+<li><a href="#distibution-of-dependent-variable">Distibution of
+dependent variable</a></li>
+<li><a href="#performance-evaluation">Performance Evaluation</a></li>
+<li><a href="#modeling">Modeling</a></li>
+<li><a href="#model-adequacy-checking">Model Adequacy Checking</a></li>
+</ul></li>
+<li><a href="#classification">Classification</a>
+<ul>
+<li><a href="#decision-trees">Decision Trees</a></li>
+<li><a href="#support-vector-machine">Support Vector Machine</a></li>
+<li><a href="#categorizing-carbon-emission">Categorizing carbon
+emission</a></li>
+</ul></li>
+<li><a href="#prediction-with-test-data">Prediction with test
+data</a></li>
+<li><a href="#looking-at-the-transition">Looking at the
+transition</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</nav>
+</div>
+<h1 id="introduction">Introduction</h1>
+<p>The project is based on devising an approach to model carbon emission
+based on longitudinal data for different countries (100 in number). Due
+to limitation in the available data, the approach is thought to
+carefully look into statistical properties while preparing the models.
+Here the data (secondary data) available is taken from different sources
+and consolidated into a single structured data that can be used for
+modeling.</p>
+<p>Note - Also making small changes to the code for better presentation
+in the blog. But the approach to the problem is similar to the report
+provided.</p>
+<h1 id="dealing-with-data">Dealing with data</h1>
+<p>The data for different countries have been drawn from different
+sources. Please refer to Section 6.2 in the <a
+href="https://1drv.ms/b/s!ApFYtM4ZFefbgxpGtypiPWaMjT_1">report</a> for
+knowing the sources and the description of the fields taken.</p>
+<h2 id="importing-and-description">Importing and description</h2>
+<p>The structured data is created by combining data from different
+sources into one single dataset. The dataset consists of 100 countries
+as subjects with initially 14 variables across 10 years time period
+(2007-2016).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#importing file</span>
+<span class='va'>carbon</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='st'>'final_data_climate_change.csv'</span>, header <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='va'>carbon.copy</span> <span class='op'>&lt;-</span> <span class='va'>carbon</span>
+
+<span class='co'>#variable names of the dataframe</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code> [1] &quot;country_code&quot;  &quot;countries&quot;     &quot;year&quot;          &quot;pop_total&quot;    
+ [5] &quot;co2emission&quot;   &quot;gnipercapita&quot;  &quot;fuel_export&quot;   &quot;fuel_import&quot;  
+ [9] &quot;gdp&quot;           &quot;forest_area&quot;   &quot;agri_area&quot;     &quot;land_area&quot;    
+[13] &quot;temp_change&quot;   &quot;ind_hdi&quot;       &quot;ind_inflation&quot; &quot;ind_elec&quot;     </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/attach.html'>attach</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="descriptive-statistics">Descriptive Statistics</h2>
+<p>As initial steps, we need to have a careful look at the various
+information about all the variables. The descriptive information can be
+interpreted based on subject knowledge and how different fields are
+going to affect the model.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://personality-project.org/r/psych/'>psych</a></span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span>scipen <span class='op'>=</span> <span class='fl'>99999</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/pkg/psych/man/describe.html'>describe</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>13</span><span class='op'>]</span>, fast <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>             vars    n             mean               sd
+pop_total       1 1000      56411714.72     185569765.44
+co2emission     2 1000           291.94          1069.18
+gnipercapita    3 1000         20319.67         17117.51
+fuel_export     4 1000 1699617118421.82 4371982939893.39
+fuel_import     5 1000 2284152539170.12 5561244475837.46
+gdp             6 1000  642442089374.03 1932922384003.83
+forest_area     7 1000        329230.34       1056658.29
+agri_area       8 1000        380194.19        870846.62
+land_area       9 1000        993216.37       2460856.45
+temp_change    10 1000             1.04             0.55
+                       min               max             range
+pop_total        167639.00     1378665000.00     1378497361.00
+co2emission           0.38           9820.36           9819.98
+gnipercapita        772.00          91519.00          90747.00
+fuel_export        1360.41 37500000000000.00 37499999998639.59
+fuel_import   294481364.90 50300000000000.00 50299705518635.10
+gdp          1278745519.00 18700000000000.00 18698721254481.00
+forest_area           3.50        8151356.25        8151352.75
+agri_area            82.00        5278330.00        5278248.00
+land_area           320.00       16377740.00       16377420.00
+temp_change          -0.32              2.94              3.26
+                          se
+pop_total         5868231.24
+co2emission            33.81
+gnipercapita          541.30
+fuel_export  138254239814.62
+fuel_import  175861991686.76
+gdp           61124372737.75
+forest_area         33414.47
+agri_area           27538.59
+land_area           77819.11
+temp_change             0.02</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#checking the categorical variables</span>
+<span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>ind_hdi</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>ind_hdi
+     high       low    medium Very high 
+      284       147       151       418 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>ind_inflation</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>ind_inflation
+    creeping/low        deflation        galloping          running 
+             497              103               40               87 
+walking/moderate 
+             273 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>ind_elec</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>ind_elec
+     high       low  moderate very high  very low 
+       32        44        51       818        55 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>ind_elec</span>,<span class='va'>year</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>           year
+ind_elec     1  2  3  4  5  6  7  8  9 10
+  high       4  3  3  3  3  3  2  3  3  5
+  low        3  4  3  3  5  4  4  6  6  6
+  moderate   5  5  6  6  5  6  5  4  5  4
+  very high 81 81 81 81 81 81 83 83 83 83
+  very low   7  7  7  7  6  6  6  4  3  2</code></pre>
+</div>
+<h2 id="correlation-matrix">Correlation matrix</h2>
+<p>Looking at the distribution of dependent variable and correlation
+matrix between different variables</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># finding correlation between numerical variables</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://personality-project.org/r/psych/'>psych</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/psych/man/pairs.panels.html'>pairs.panels</a></span><span class='op'>(</span>
+  <span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>13</span><span class='op'>]</span>,
+  method <span class='op'>=</span> <span class='st'>"pearson"</span>,
+  hist.col <span class='op'>=</span> <span class='st'>"#00AFBB"</span>,
+  density <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  ellipses <span class='op'>=</span> <span class='cn'>F</span>,
+  main <span class='op'>=</span> <span class='st'>"Correlation and scatter plot of the data"</span>
+<span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="classification-based-prediction-of-carbon-emission_files/figure-html5/Analyzing%20and%20visual-1.png" width="624" /></p>
+</div>
+<h1 id="variable-selection">Variable Selection</h1>
+<h2 id="based-on-descriptive">Based on descriptive</h2>
+<ol type="1">
+<li>ind_elec: One level of this variable is having high frequency and
+hence it can be considered insignificant.</li>
+<li>fuel_export and fuel_import : Since the values of these are already
+included in the gdp variable this can result in double counting hence it
+can be dropped</li>
+<li>land_area: Since this area includes agri_area and forest_area so
+there will be double counting and hence we can drop this variable</li>
+</ol>
+<h2 id="based-on-correlation-matrix">Based on correlation matrix</h2>
+<ol start="4" type="1">
+<li>temp_change: Since this variable is having almost no correlation
+with response variable and also based on geographical understanding
+temp_change does not influence co2 emission but its the other way
+round.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#dropping the above variables</span>
+<span class='va'>carbon</span> <span class='op'>&lt;-</span> <span class='va'>carbon</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>7</span>, <span class='op'>-</span><span class='fl'>8</span>, <span class='op'>-</span><span class='fl'>12</span>, <span class='op'>-</span><span class='fl'>13</span>, <span class='op'>-</span><span class='fl'>16</span><span class='op'>)</span><span class='op'>]</span>
+
+<span class='co'>#Standardizing the numerical variables to remove the unit problem and high value variables</span>
+<span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>9</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>9</span><span class='op'>]</span>, center <span class='op'>=</span> <span class='cn'>T</span>, scale <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>3</span>
+</code></pre>
+</div>
+</div>
+<p>Note: We are trying to make a basic model after dropping the above
+variables and again conducting the stepwise regression for statistical
+significance</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#creating basic glm model</span>
+<span class='va'>obj</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span>
+    formula <span class='op'>=</span> <span class='va'>co2emission</span> <span class='op'>~</span> <span class='va'>.</span>,
+    data <span class='op'>=</span> <span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>3</span><span class='op'>:</span><span class='fl'>11</span><span class='op'>]</span>,
+    family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>Gamma</a></span><span class='op'>(</span>link <span class='op'>=</span> <span class='va'>inverse</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>obj</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>obj</span><span class='op'>$</span><span class='va'>residuals</span>, xlab <span class='op'>=</span> <span class='st'>"Residuals"</span>,
+     main <span class='op'>=</span> <span class='st'>"Distribution of Residuals"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="classification-based-prediction-of-carbon-emission_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<h2 id="based-on-stepwise-regression">Based on stepwise regression</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Going for stepwise regression and checking if significance of variables</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/step.html'>step</a></span><span class='op'>(</span><span class='va'>obj</span>, direction <span class='op'>=</span> <span class='st'>"both"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Start:  AIC=-1262.2
+co2emission ~ year + pop_total + gnipercapita + gdp + forest_area + 
+    agri_area + ind_hdi + ind_inflation
+
+                Df Deviance      AIC
+- gnipercapita   1   1.8804 -1264.13
+&lt;none&gt;               1.8803 -1262.20
+- ind_inflation  4   1.9039 -1257.98
+- ind_hdi        3   1.9496 -1232.35
+- year           1   1.9811 -1212.07
+- agri_area      1   2.1032 -1148.94
+- forest_area    1   2.3513 -1020.66
+- gdp            1   5.4292   570.64
+- pop_total      1   5.9903   860.76
+
+Step:  AIC=-1264.13
+co2emission ~ year + pop_total + gdp + forest_area + agri_area + 
+    ind_hdi + ind_inflation
+
+                Df Deviance      AIC
+&lt;none&gt;               1.8804 -1264.13
++ gnipercapita   1   1.8803 -1262.20
+- ind_inflation  4   1.9048 -1259.50
+- year           1   1.9827 -1213.21
+- ind_hdi        3   2.0372 -1188.99
+- agri_area      1   2.1037 -1150.61
+- forest_area    1   2.3517 -1022.25
+- gdp            1   5.6501   684.60
+- pop_total      1   6.1682   952.68</code></pre>
+<pre><code>
+Call:  glm(formula = co2emission ~ year + pop_total + gdp + forest_area + 
+    agri_area + ind_hdi + ind_inflation, family = Gamma(link = inverse), 
+    data = carbon[, 3:11])
+
+Coefficients:
+                  (Intercept)                           year  
+                    0.4958884                      0.0011904  
+                    pop_total                            gdp  
+                   -0.0190026                     -0.0172498  
+                  forest_area                      agri_area  
+                   -0.0075838                     -0.0074414  
+                   ind_hdilow                  ind_hdimedium  
+                    0.0061039                     -0.0011646  
+             ind_hdiVery high         ind_inflationdeflation  
+                   -0.0073186                     -0.0050900  
+       ind_inflationgalloping           ind_inflationrunning  
+                    0.0006821                     -0.0005409  
+ind_inflationwalking/moderate  
+                    0.0009651  
+
+Degrees of Freedom: 999 Total (i.e. Null);  987 Residual
+Null Deviance:      51.28 
+Residual Deviance: 1.88     AIC: -1264</code></pre>
+</div>
+<ol start="5" type="1">
+<li>gnipercapita: By looking at the stepwise regression we can say that
+this variable is insignificant and hence can be dropped.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#From stepwise we see that gnipercapita can also be dropped</span>
+<span class='co'>#Finally we get the variables for modeling as</span>
+<span class='va'>carbon</span> <span class='op'>&lt;-</span> <span class='va'>carbon</span><span class='op'>[</span>, <span class='op'>-</span><span class='fl'>6</span><span class='op'>]</span>
+<span class='va'>var_name</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h1 id="creating-functions">Creating functions</h1>
+<h2 id="day-forward-technique">Day Forward Technique</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Performance Evaluation of training set using day forward technique</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#GLM Model</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>day_forward.glm <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Robust Regression</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>day_forward.glmrob <span class="ot">&lt;-</span> <span class="cf">function</span> (x) {</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<h2 id="predict-second-half-technique">Predict Second Half
+Technique</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Performance Evaluation of training set using Predict second half technique</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#GLM Model</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>predict_second_half.glm <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Robust Regression</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>predict_second_half.glmrob <span class="ot">&lt;-</span> <span class="cf">function</span> (x) {</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<h2 id="model-building">Model Building</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function for model building</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#GLM Model</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>model.glm <span class="ot">&lt;-</span> <span class="cf">function</span> (x) {</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Robust GLM Model</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>model.glmrob <span class="ot">&lt;-</span> <span class="cf">function</span> (x) {</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<h2 id="model-graph-display">Model Graph Display</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function for graphical display</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#GLM Model</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>draw.glm <span class="ot">&lt;-</span> <span class="cf">function</span>(object,st) {</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Model Adequacy Checking</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Residual Plots</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># QQ plots</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>}    </span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Robust GLM Model</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>draw.glmrob <span class="ot">&lt;-</span> <span class="cf">function</span> (object,st) {</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Model Adequacy Checking</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Residual Plots</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># QQ plots</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<h2 id="prediction-error">Prediction Error</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#Prediction error function</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#GLM Model</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> predicterror.glm <span class="ot">&lt;-</span> <span class="cf">function</span>(object,z) {</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>   ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a> }</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a> <span class="co">#Robust GLM Model</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a> predicterror.glmrob <span class="ot">&lt;-</span> <span class="cf">function</span>(object,z) {</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>   ...Refer to <span class="fu">report</span> (Chapter <span class="dv">7</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h1 id="feature-scaling">Feature Scaling</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>### Feature scaling</span>
+<span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>3</span>
+</code></pre>
+</div>
+</div>
+<h1 id="train-and-test-set">Train and Test set</h1>
+<p>Taking the first 8 years as training set and last 2 years as test set
+for validation of model on the overall dataset.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>##Splitting the data into train and test</span>
+<span class='va'>training_set</span> <span class='op'>=</span> <span class='va'>carbon</span><span class='op'>[</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&gt;=</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&lt;=</span> <span class='fl'>8</span>, <span class='op'>]</span>
+<span class='va'>test_set</span> <span class='op'>=</span> <span class='va'>carbon</span><span class='op'>[</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span> <span class='op'>|</span> <span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='op'>]</span>
+</code></pre>
+</div>
+</div>
+<h1 id="clustering">Clustering</h1>
+<p>We already know that for every country the carbon emission will not
+be same. For big or developed and developing countries it will be high
+and for smaller countries it will be low. So a single model will not be
+efficient in tackling this problem. This can be solved by grouping
+countries based on different features and then building models based on
+the grouping to which it belongs.</p>
+<h2 id="data-manipulation">Data Manipulation</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>carbon</span><span class='op'>&lt;-</span><span class='va'>carbon.copy</span>
+
+<span class='co'>#Converting categorical to ordinal data</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://had.co.nz/plyr'>plyr</a></span><span class='op'>)</span>
+<span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_hdi</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/plyr/man/mapvalues.html'>mapvalues</a></span><span class='op'>(</span>
+    <span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_hdi</span>,
+    from <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"low"</span>, <span class='st'>"medium"</span>, <span class='st'>"high"</span>, <span class='st'>"Very high"</span><span class='op'>)</span>,
+    to <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>4</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_inflation</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/plyr/man/mapvalues.html'>mapvalues</a></span><span class='op'>(</span>
+  <span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_inflation</span>,
+  from <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
+    <span class='st'>"deflation"</span>,
+    <span class='st'>"creeping/low"</span>,
+    <span class='st'>"walking/moderate"</span>,
+    <span class='st'>"running"</span>,
+    <span class='st'>"galloping"</span>
+  <span class='op'>)</span>,
+  to <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>4</span>, <span class='fl'>5</span><span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_hdi</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_hdi</span><span class='op'>)</span>
+<span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_inflation</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>ind_inflation</span><span class='op'>)</span>
+
+<span class='co'>#Bringing the variables to same level through transformation</span>
+<span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span><span class='op'>)</span>
+
+<span class='co'>#Normalizing the variables both continuous and ordinal</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/berndbischl/BBmisc'>BBmisc</a></span><span class='op'>)</span>
+<span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/BBmisc/man/normalize.html'>normalize</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>, method <span class='op'>=</span> <span class='st'>"range"</span>, range <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="distance-matrix">Distance Matrix</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>dd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>0</span>, nrow <span class='op'>=</span> <span class='fl'>100</span>, ncol <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
+<span class='va'>cc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>0</span>, nrow <span class='op'>=</span> <span class='fl'>100</span>, ncol <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
+<span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
+<span class='op'>{</span>
+  <span class='va'>carb_clus</span> <span class='op'>&lt;-</span> <span class='va'>carbon</span><span class='op'>[</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='va'>i</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>1</span>, <span class='op'>-</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>
+  <span class='va'>cc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/dist.html'>dist</a></span><span class='op'>(</span><span class='va'>carb_clus</span><span class='op'>[</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span>, method <span class='op'>=</span> <span class='st'>'euclidean'</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>cc</span> <span class='op'>&lt;-</span> <span class='va'>cc</span> <span class='op'>^</span> <span class='fl'>2</span>
+  <span class='va'>dd</span> <span class='op'>=</span> <span class='va'>dd</span> <span class='op'>+</span> <span class='va'>cc</span>
+<span class='op'>}</span>
+<span class='va'>dd</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>dd</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="cluster-number-choice">Cluster number choice</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Elbow method</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://svn.r-project.org/R-packages/trunk/cluster/'>cluster</a></span><span class='op'>)</span>
+<span class='va'>sil_width</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>NA</span><span class='op'>)</span>
+<span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>2</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
+<span class='op'>{</span>
+  <span class='va'>pam_fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/cluster/man/pam.html'>pam</a></span><span class='op'>(</span><span class='va'>dd</span>, diss <span class='op'>=</span> <span class='cn'>TRUE</span>, k <span class='op'>=</span> <span class='va'>i</span><span class='op'>)</span>
+  <span class='va'>sil_width</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>pam_fit</span><span class='op'>$</span><span class='va'>silinfo</span><span class='op'>$</span><span class='va'>avg.width</span>
+<span class='op'>}</span>
+
+<span class='co'># Plot sihouette width (higher is better)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='va'>sil_width</span>,
+     xlab <span class='op'>=</span> <span class='st'>"Number of clusters"</span>,
+     ylab <span class='op'>=</span> <span class='st'>"Silhouette Width"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='va'>sil_width</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="Silhouette%20plot.jpeg" /></p>
+<h2 id="pam-algorithm">PAM Algorithm</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#By looking at plot, optimal no of cluster is 3</span>
+<span class='va'>pam_fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/cluster/man/pam.html'>pam</a></span><span class='op'>(</span><span class='va'>dd</span>, diss <span class='op'>=</span> <span class='cn'>TRUE</span>, k <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>pam_cluster</span> <span class='op'>=</span> <span class='va'>pam_fit</span><span class='op'>$</span><span class='va'>clustering</span>
+<span class='va'>pam_cluster</span>
+
+<span class='co'>#Preparing cluster list</span>
+<span class='va'>cluster_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>carbon</span><span class='op'>[</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>]</span>, <span class='va'>pam_cluster</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>cluster_list</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"countries"</span>, <span class='st'>"cluster_no"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="plotting-clusters">Plotting clusters</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Plotting cluster numbers in a graph</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/jkrijthe/Rtsne'>Rtsne</a></span><span class='op'>)</span>
+<span class='va'>tsne_obj</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/Rtsne/man/Rtsne.html'>Rtsne</a></span><span class='op'>(</span><span class='va'>dd</span>, is_distance <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://magrittr.tidyverse.org'>magrittr</a></span><span class='op'>)</span> <span class='co'># needs to be run every time you start R and want to use %&gt;%</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span>
+<span class='va'>tsne_data</span> <span class='op'>&lt;-</span> <span class='va'>tsne_obj</span><span class='op'>$</span><span class='va'>Y</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/setNames.html'>setNames</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"X"</span>, <span class='st'>"Y"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>cluster <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>pam_cluster</span><span class='op'>)</span>,
+         name <span class='op'>=</span> <span class='va'>cluster_list</span><span class='op'>$</span><span class='va'>countries</span><span class='op'>)</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>X</span>, y <span class='op'>=</span> <span class='va'>Y</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='va'>tsne_data</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='va'>cluster</span><span class='op'>)</span>, size <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span>
+<span class='va'>carbon_clus.submodel</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>carbon.copy</span>, <span class='va'>cluster_list</span>, by <span class='op'>=</span> <span class='st'>"countries"</span><span class='op'>)</span>
+<span class='va'>carbon_clus.classify</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>carbon</span>, <span class='va'>cluster_list</span>, by <span class='op'>=</span> <span class='st'>"countries"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="Rtsneplot.jpeg" /></p>
+<h2 id="map-visualization">Map Visualization</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mages.github.io/googleVis/'>googleVis</a></span><span class='op'>)</span>
+<span class='va'>WorldMap</span> <span class='op'>=</span> <span class='va'>cluster_list</span>
+<span class='va'>G5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://mages.github.io/googleVis/reference/gvisGeoChart.html'>gvisGeoChart</a></span><span class='op'>(</span>
+  <span class='va'>WorldMap</span>,
+  <span class='st'>"countries"</span>,
+  <span class='st'>"cluster_no"</span>,
+  options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+    displayMode <span class='op'>=</span> <span class='st'>'auto'</span>,
+    dataMode <span class='op'>=</span> <span class='st'>"regions"</span>,
+    colorAxis <span class='op'>=</span> <span class='st'>"{colors:['blue', 'red','green']}"</span>,
+    backgroundColor <span class='op'>=</span> <span class='st'>"lightblue"</span>,
+    width <span class='op'>=</span> <span class='fl'>800</span>,
+    height <span class='op'>=</span> <span class='fl'>400</span>,
+    legend <span class='op'>=</span> <span class='st'>"{colors:['blue','red','green']}"</span>
+  <span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>G5</span><span class='op'>)</span>
+<span class='co'>#Only countries not plotted-Malta,Bahrain,Barbados,St. Lucia due to small area size</span>
+</code></pre>
+</div>
+</div>
+<p><img src="clustermap.jpg" /></p>
+<h2 id="descriptive-statistics-of-clustered-countries">Descriptive
+Statistics of clustered countries</h2>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p><img src="clusdescriptive.jpg" /></p>
+<h2 id="merging-levels-of-certain-fields">Merging levels of certain
+fields</h2>
+<p>In 1st cluster - ind_hdi ==&gt; low level + medium level -
+ind_inflation ==&gt; galloping + running</p>
+<p>In 2nd Cluster - ind_hdi ==&gt; low + medium</p>
+<p>In 3rd cluster - ind_hdi ==&gt; Very high + high + medium -
+ind_inflation ==&gt; galloping + running</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h1 id="data-modeling">Data Modeling</h1>
+<h2 id="distibution-of-dependent-variable">Distibution of dependent
+variable</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># taking the variable co2emission</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>co2emission</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span> <span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>carbon</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>co2emission</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_histogram.html'>geom_histogram</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>..count..</span><span class='op'>)</span>,
+                 color <span class='op'>=</span> <span class='st'>"black"</span>,
+                 fill <span class='op'>=</span> <span class='st'>"grey"</span>,
+                 bins <span class='op'>=</span> <span class='fl'>15</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='st'>"Frequency of the variable"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"Carbon Dioxide Emission"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span><span class='op'>(</span><span class='st'>"Histogram of carbon dioxide emission of complete data"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>
+    panel.grid.major <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+    panel.grid.minor <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+    panel.background <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_rect</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"transparent"</span>, colour <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span>,
+    plot.background <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_rect</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"transparent"</span>, colour <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span>,
+    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>
+  <span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="distribution.png" /></p>
+<h2 id="performance-evaluation">Performance Evaluation</h2>
+<ol type="1">
+<li>GLM</li>
+<li>Robust GLM</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Performance Evaluation of training set using day forward technique</span>
+<span class='fu'>day_forward.glm</span><span class='op'>(</span><span class='va'>training_set</span><span class='op'>)</span>
+<span class='fu'>day_forward.glmrob</span><span class='op'>(</span><span class='va'>training_set</span><span class='op'>)</span>
+
+<span class='co'>#Performance Evaluation of training set using predict second half technique</span>
+<span class='fu'>predict_second_half.glm</span><span class='op'>(</span><span class='va'>training_set</span><span class='op'>)</span>
+<span class='fu'>predict_second_half.glmrob</span><span class='op'>(</span><span class='va'>training_set</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="validation.png" /></p>
+<h2 id="modeling">Modeling</h2>
+<ol type="1">
+<li>GLM</li>
+<li>Robust GLM</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>obj1</span> <span class='op'>=</span> <span class='fu'>model.glm</span><span class='op'>(</span><span class='va'>training_set</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>obj1</span><span class='op'>)</span>
+
+<span class='va'>obj2</span> <span class='op'>=</span> <span class='fu'>model.glmrob</span><span class='op'>(</span><span class='va'>training_set</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>obj2</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="model-adequacy-checking">Model Adequacy Checking</h2>
+<ol type="1">
+<li>GLM</li>
+<li>Robust GLM</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>draw.glm</span><span class='op'>(</span><span class='va'>obj1</span>, <span class='st'>"GLM Complete Data"</span><span class='op'>)</span>
+<span class='fu'>predicterror.glm</span><span class='op'>(</span><span class='va'>obj1</span>, <span class='va'>test_set</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="mac_glm.png" /></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>draw.glmrob</span><span class='op'>(</span><span class='va'>obj2</span>, <span class='st'>"Robust GLM Complete Data"</span><span class='op'>)</span>
+<span class='fu'>predicterror.glmrob</span><span class='op'>(</span><span class='va'>obj2</span>, <span class='va'>test_set</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="mac_glmrob.png" /></p>
+<h1 id="classification">Classification</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span> <span class='op'>&lt;-</span> <span class='va'>carbon_clus.classify</span>
+<span class='va'>data</span><span class='op'>$</span><span class='va'>cluster_no</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>cluster_no</span><span class='op'>)</span>
+
+<span class='co'>#Splitting the data into training and test based on earlier criteria</span>
+<span class='va'>training_set</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>[</span><span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&gt;=</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&lt;=</span> <span class='fl'>8</span>, <span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>test_set</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>[</span><span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span> <span class='op'>|</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>
+</code></pre>
+</div>
+</div>
+<h2 id="decision-trees">Decision Trees</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>######################## DECISION TREE #################################</span>
+<span class='co'>#Decision trees dont need any preprocessing</span>
+<span class='co'>#Works fine on actual values as well but due to large number we only do log</span>
+<span class='co'>#transformation on the continuous variables</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/bethatkinson/rpart'>rpart</a></span><span class='op'>)</span>
+<span class='va'>data</span> <span class='op'>&lt;-</span> <span class='va'>carbon_clus.submodel</span>
+<span class='va'>data</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>[</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>3</span>
+<span class='va'>data</span><span class='op'>$</span><span class='va'>cluster_no</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>cluster_no</span><span class='op'>)</span>
+<span class='co'>#Splitting the data into training and test based on earlier criteria</span>
+<span class='va'>training_set</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>[</span><span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&gt;=</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&lt;=</span> <span class='fl'>8</span>, <span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>test_set</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>[</span><span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span> <span class='op'>|</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>classobj2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>cluster_no</span> <span class='op'>~</span> <span class='va'>.</span>,
+                   data <span class='op'>=</span> <span class='va'>training_set</span>,
+                   control <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.control.html'>rpart.control</a></span><span class='op'>(</span>minsplit <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>pred</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>classobj2</span>, <span class='va'>test_set</span><span class='op'>[</span>, <span class='op'>-</span><span class='fl'>8</span><span class='op'>]</span>, type <span class='op'>=</span> <span class='st'>'class'</span><span class='op'>)</span>
+<span class='va'>t2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>pred</span>, <span class='va'>test_set</span><span class='op'>[</span>, <span class='fl'>8</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>t2</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>""</span>, <span class='st'>"Pedicted"</span>, <span class='st'>""</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>t2</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>""</span>, <span class='st'>"Actual"</span>, <span class='st'>""</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Accuracy Score: "</span>, <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>t2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>test_set</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>100</span>, <span class='st'>"%\n"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://www.milbo.org/rpart-plot/index.html'>rpart.plot</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/rpart.plot/man/rpart.plot.html'>rpart.plot</a></span><span class='op'>(</span><span class='va'>classobj2</span>,
+           box.palette <span class='op'>=</span> <span class='st'>"RdBu"</span>,
+           shadow.col <span class='op'>=</span> <span class='st'>"gray"</span>,
+           nn <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="tree.png" /></p>
+<h2 id="support-vector-machine">Support Vector Machine</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#################### SVM ######################################</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>e1071</span><span class='op'>)</span>
+<span class='va'>classobj1</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/e1071/man/svm.html'>svm</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>cluster_no</span> <span class='op'>~</span> <span class='va'>.</span>,
+      data <span class='op'>=</span> <span class='va'>training_set</span>,
+      kernel <span class='op'>=</span> <span class='st'>'radial'</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>classobj1</span><span class='op'>)</span>
+<span class='va'>pred</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>classobj1</span>, <span class='va'>test_set</span><span class='op'>[</span>, <span class='op'>-</span><span class='fl'>8</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>t1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>pred</span>, <span class='va'>test_set</span><span class='op'>[</span>, <span class='fl'>8</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>t1</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>""</span>, <span class='st'>"Pedicted"</span>, <span class='st'>""</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>t1</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>""</span>, <span class='st'>"Actual"</span>, <span class='st'>""</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Accuracy Score: "</span>, <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>t1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>test_set</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>100</span>, <span class='st'>"%\n"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="categorizing-carbon-emission">Categorizing carbon emission</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Categorizing carbon emission</span>
+<span class='va'>carbon_category</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+<span class='op'>{</span>
+  <span class='kw'>if</span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&gt;=</span> <span class='fl'>600</span><span class='op'>)</span>
+  <span class='op'>{</span>
+    <span class='va'>status</span> <span class='op'>=</span> <span class='st'>'Extremely High'</span>
+  <span class='op'>}</span> <span class='kw'>else</span><span class='op'>{</span>
+    <span class='kw'>if</span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&gt;=</span> <span class='fl'>200</span> <span class='op'>&amp;</span> <span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>600</span><span class='op'>)</span>
+    <span class='op'>{</span>
+      <span class='va'>status</span> <span class='op'>=</span> <span class='st'>'Very High'</span>
+    <span class='op'>}</span> <span class='kw'>else</span>
+    <span class='op'>{</span>
+      <span class='kw'>if</span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&gt;=</span> <span class='fl'>100</span> <span class='op'>&amp;</span> <span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>200</span><span class='op'>)</span>
+      <span class='op'>{</span>
+        <span class='va'>status</span> <span class='op'>=</span> <span class='st'>'High'</span>
+      <span class='op'>}</span> <span class='kw'>else</span><span class='op'>{</span>
+        <span class='kw'>if</span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&gt;=</span> <span class='fl'>50</span> <span class='op'>&amp;</span> <span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>100</span><span class='op'>)</span>
+        <span class='op'>{</span>
+          <span class='va'>status</span> <span class='op'>=</span> <span class='st'>'Moderate'</span>
+        <span class='op'>}</span> <span class='kw'>else</span><span class='op'>{</span>
+          <span class='kw'>if</span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&gt;=</span> <span class='fl'>20</span> <span class='op'>&amp;</span> <span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>50</span><span class='op'>)</span>
+          <span class='op'>{</span>
+            <span class='va'>status</span> <span class='op'>=</span> <span class='st'>'Low'</span>
+          <span class='op'>}</span> <span class='kw'>else</span><span class='op'>{</span>
+            <span class='va'>status</span> <span class='op'>=</span> <span class='st'>'Safe'</span>
+          <span class='op'>}</span>
+        <span class='op'>}</span>
+      <span class='op'>}</span>
+    <span class='op'>}</span>
+  <span class='op'>}</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>status</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h1 id="prediction-with-test-data">Prediction with test data</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>###################### Prediction Result for our study</span>
+<span class='co'># Ready to classify using SVM</span>
+<span class='va'>studydata1</span> <span class='op'>=</span> <span class='va'>carbon_clus.classify</span><span class='op'>[</span><span class='va'>carbon_clus.classify</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span>, <span class='op'>]</span>
+
+<span class='co'>#Predicting the class</span>
+<span class='va'>predclass</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>classobj1</span>, <span class='va'>studydata1</span><span class='op'>)</span>
+<span class='va'>c1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>predclass</span> <span class='op'>==</span> <span class='st'>'1'</span><span class='op'>)</span>
+<span class='va'>c2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>predclass</span> <span class='op'>==</span> <span class='st'>'2'</span><span class='op'>)</span>
+<span class='va'>c3</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>predclass</span> <span class='op'>==</span> <span class='st'>'3'</span><span class='op'>)</span>
+
+<span class='co'>#Predicting carbon emission after preprocessing</span>
+<span class='va'>studydata2</span> <span class='op'>=</span> <span class='va'>carbon</span><span class='op'>[</span><span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span> <span class='op'>|</span> <span class='va'>carbon</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='op'>]</span>
+
+<span class='co'>#Use submodel1 for cluster1 , complete data model for cluster2 , submodel3 for cluster3</span>
+<span class='va'>data1</span> <span class='op'>=</span> <span class='fu'>mergelevel</span><span class='op'>(</span><span class='va'>studydata2</span><span class='op'>[</span><span class='va'>c1</span>, <span class='op'>]</span> , <span class='st'>'1'</span><span class='op'>)</span>
+<span class='va'>data2</span> <span class='op'>=</span> <span class='va'>studydata2</span><span class='op'>[</span><span class='va'>c2</span> ,<span class='op'>]</span>
+<span class='va'>data3</span> <span class='op'>=</span> <span class='fu'>mergelevel</span><span class='op'>(</span><span class='va'>studydata2</span><span class='op'>[</span><span class='va'>c3</span>, <span class='op'>]</span> , <span class='st'>'3'</span><span class='op'>)</span>
+<span class='va'>predval1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>subobj1</span> , <span class='va'>data1</span> , type <span class='op'>=</span> <span class='st'>"response"</span><span class='op'>)</span>
+<span class='va'>predval2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>obj</span> , <span class='va'>data2</span> , type <span class='op'>=</span> <span class='st'>"response"</span><span class='op'>)</span>
+<span class='va'>predval3</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>subobj3</span> , <span class='va'>data3</span> , type <span class='op'>=</span> <span class='st'>"response"</span><span class='op'>)</span> 
+<span class='va'>predcarbon</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>data1</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span>, 
+                              <span class='va'>data2</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span>, 
+                              <span class='va'>data3</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>,
+                        <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>predval1</span> , <span class='va'>predval2</span> , <span class='va'>predval3</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>predcarbon</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"countries"</span>, <span class='st'>"year"</span>, <span class='st'>"pred emission"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="classification.png" /> <img src="comparison.png" /></p>
+<h1 id="looking-at-the-transition">Looking at the transition</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>########### Study carbon status history </span>
+<span class='co'>#Checking status of predicted value</span>
+<span class='va'>predemission_status</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>predcarbon</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>predemission_status</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>=</span> <span class='fu'>carbon_category</span><span class='op'>(</span><span class='va'>predcarbon</span><span class='op'>[</span><span class='va'>i</span> , <span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>predcarbon</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>predcarbon</span>, <span class='va'>predemission_status</span><span class='op'>)</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span>
+<span class='va'>carbon_map</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>carbon_map</span><span class='op'>[</span>, <span class='fl'>1</span><span class='op'>]</span> , <span class='va'>carbon_map</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span> , <span class='va'>carbon_map</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>carbon_map</span><span class='op'>)</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"countries year"</span>,
+    <span class='st'>"countries"</span> ,
+    <span class='st'>"year"</span> ,
+    <span class='st'>"co2emission"</span> ,
+    <span class='st'>"emission status"</span><span class='op'>)</span>
+<span class='va'>countries_year</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>predcarbon</span><span class='op'>[</span>, <span class='fl'>1</span><span class='op'>]</span> , <span class='va'>predcarbon</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>predcarbon</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span> <span class='op'>(</span><span class='va'>countries_year</span> , <span class='va'>predcarbon</span><span class='op'>)</span>
+<span class='va'>predcarbon</span> <span class='op'>=</span> <span class='va'>predcarbon</span><span class='op'>[</span>, <span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span> , <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>histstudy</span> <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>carbon_map</span>, <span class='va'>predcarbon</span> , by <span class='op'>=</span> <span class='st'>"countries year"</span><span class='op'>)</span><span class='op'>[</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span>
+
+<span class='va'>t0</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>histstudy</span> <span class='op'>[</span><span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span> <span class='op'>|</span> <span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='fl'>4</span><span class='op'>]</span>,
+           <span class='va'>histstudy</span><span class='op'>[</span><span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span> <span class='op'>|</span> <span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='fl'>6</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>accuracy</span> <span class='op'>=</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>t0</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>/</span> <span class='fl'>200</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>100</span>
+<span class='va'>accuracy</span>
+<span class='va'>t1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>histstudy</span><span class='op'>[</span><span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='fl'>4</span><span class='op'>]</span>,
+           <span class='va'>histstudy</span> <span class='op'>[</span><span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>8</span>, <span class='fl'>4</span><span class='op'>]</span><span class='op'>)</span> 
+<span class='va'>t2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>histstudy</span><span class='op'>[</span><span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='fl'>4</span><span class='op'>]</span>, 
+           <span class='va'>histstudy</span> <span class='op'>[</span><span class='va'>histstudy</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>==</span> <span class='fl'>9</span>, <span class='fl'>6</span><span class='op'>]</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Row vs Column:Year 1 vs Year 8\n"</span><span class='op'>)</span>
+<span class='va'>t1</span>
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Row vs Column:Year 1 vs Year 9\n"</span><span class='op'>)</span>
+<span class='va'>t2</span>
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Year 1 vs Year 8: Transition of change(Count)"</span>,
+    <span class='fl'>100</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>t1</span><span class='op'>)</span><span class='op'>)</span>,<span class='st'>"\n"</span><span class='op'>)</span> 
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Year 1 vs Year 9: Transition of change(Count)"</span>,
+    <span class='fl'>100</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>t2</span><span class='op'>)</span><span class='op'>)</span>,<span class='st'>"\n"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><img src="transition.png" /> <img src="transition_res.png" /></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In our study, we have dealt with an approach to predict carbon
+dioxide emission based on the classification of the countries. The study
+can help to understand the dynamics of climate change in a more better
+way than just going for a descriptive analysis. In our study, we first
+classify the data based on the features and based on the label predicted
+we choose the model to predict the carbon dioxide emission. On
+prediction of the carbon dioxide emission, we know the status of carbon
+emission through the categories created and we study the historical
+emissions of the countries and see the jump in the status of the
+countries.</p>
+<p>In our analysis, we see that R squared measure cannot be taken as a
+criteria for judgment of models since as variation in the response
+variable reduces drastically, the R squared value deteriorates although
+the prediction power measured through MSE is good.By looking at the
+validation table, we see that sub-model 1 and sub-model 3 are the best
+models with not much variation between Robust GLM and GLM models.
+Sub-model 2 deteriorates year wise and hence it is not appropriate for
+prediction. Instead we can use complete model in place of sub-model 2.
+It has been observed that most of the time GLM model proves to be better
+that robust GLM model but for countries with high values or extreme
+values, Robust GLM is the best choice. It was noticed that due to
+extreme values there is deviation in the assumptions in the tail ends as
+visible in model adequacy checking.</p>
+<p>In the classification problem, we see that SVM performs better than
+decision trees and hence SVM was used in our predictions irrespective of
+the year since we have made classifier considering data to be
+independent of time. But based on subject knowledge, decision trees are
+supposed to be better classifier for longitudinal data. So, this thing
+can be kept in mind while performing classification. After
+classification we perform prediction based on the models selected for
+the groups. Predicted values are categorized to see the transition that
+has occurred over the years by the 100 countries.</p>
+<p>After the prediction and categorization we see that there is an
+increase in the number of countries which has shown transition between
+year 1 and year 9 from year 1 and year 8. This analysis can be more
+refined by analyzing individual countries but currently this is not part
+of our study. Hence, we conclude that even with limitation of data(due
+to smoothed data by secondary sources) we can say that this approach is
+very helpful in understanding the dynamics of carbon emission by
+countries over the years.</p>
+<p>Future studies can involve multivariate longitudinal analysis,
+multivariate time series forecasting and machine learning as techniques
+to get better results. A minor study was made with some machine learning
+model(not included in the study) and it was seen that it performed
+better than statistical models. Also considering the complex nature of
+the topic and various complexities in the analysis and limitation of
+data, machine learning proves to be an apt technique in this field. This
+study was done to explain the approach in predicting carbon emission and
+making a useful analysis that can help in building a sustainable world
+in future. It is just a small contribution in our fight to reduce carbon
+emission and save our planet.</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
